@@ -1,0 +1,78 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> {% block title %}  {% endblock title %}  </title>
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> -->
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ 
+</head>
+<body>
+     <nav class="navbar" id="navbar">
+      
+      {% if companies %}
+      <a href="#" class="nav-logo">{{ request.companies.name}}</a>
+      {% else %}
+      <a href="#" class="nav-logo">Kuyabe food</a>
+      {% endif %}
+        
+     
+
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="">Categories</a></li>
+        <li><a href="">About</a></li>
+        <li><a href="">contact Us</a></li>
+      </ul>
+
+
+      <div class="nav-profile">
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        {% if request.user.is_authenticated %}
+        <a href="profile" id="myBtn"><img src="{% static 'images/client2.jpg' %}" alt="" width="50" height="50"> <span>{{ request.user.username }}</span></a>
+        <!-- <div id="myModal" class="modal"> -->
+
+          <!-- Modal content -->
+          <!-- <div class="modal-content">
+            <div class="modal-header">
+              <span class="close">&times;</span>
+              <h2>Modal Header</h2>
+            </div>
+            <div class="modal-body">
+              <p>Some text in the Modal Body</p>
+              <p>Some other text...</p>
+            </div>
+            <div class="modal-footer">
+              <h3>Modal Footer</h3>
+            </div>
+          </div>
+        
+        </div> -->
+        <a href="logout"> <span>logout</span></a>
+          
+        {% else %}
+          
+        <a href="{% url  'register' %}"><span>Sign Up</span></a>
+        <a href="{% url  'login' %}"> <span>login</span></a>
+        {% endif %}
+      </div>
+     </nav>
+
+    {% block content %}
+      
+    {% endblock content %}
+
+   
+     <footer>
+      <center>
+      &copy;Kuyabe Tech
+    </center>
+     </footer>
+  
+  <script src="{% static 'js/custom.js' %}"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> -->
+</body>
+</html>

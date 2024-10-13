@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+  Home
+{% endblock title %}
+
+{% block content %}
+<section class="home">
+  <img src="{% static 'images/hero-bg.jpg' %}" alt="">
+  <div class="home-title">
+    <h1>Welcome to Dije Cuisine</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>Voluptates nihil quis, beatae animi necessitatibus delectus.</p>
+    <a href="{% url  'register' %}">Get Started</a>
+  </div>
+</section>
+
+<section class="product">
+  <div class="container">
+    <h1>Our Products</h1>
+<hr>
+    <div class="row">
+      <div class="col">
+        <img src="{% static 'images/f1.png' %}" alt="">
+        <div class="card-title">
+        <h2>Pizza</h2>
+        <p>N1000.00</p>
+        <a href="#">Buy Now</a>
+        </div>
+      </div>
+      <div class="col">
+        <img src="{% static 'images/f2.png' %}" alt="">
+        <div class="card-title">
+          <h2>Pizza</h2>
+          <p>N1000.00</p>
+          <a href="#">Buy Now</a>
+          </div>
+      </div>
+
+      <div class="col">
+        <img src="{% static 'images/f3.png' %}" alt="">
+
+        <div class="card-title">
+          <h2>Pizza</h2>
+          <p>N1000.00</p>
+          <a href="#">Buy Now</a>
+          </div>
+      </div>
+
+      <div class="col">
+        <img src="{% static 'images/f4.png' %}" alt="">
+
+        <div class="card-title">
+          <h2>Pizza</h2>
+          <p>N1000.00</p>
+          <a href="#">Buy Now</a>
+          </div>
+      </div>
+
+      <div class="col">
+        <img src="{% static 'images/f5.png' %}" alt="">
+       <div class="card-title">
+        <h2>Pizza</h2>
+        <p>N1000.00</p>
+        <a href="#">Buy Now</a>
+        </div>
+      </div>
+
+      <div class="col">
+        <img src="{% static 'images/f6.png' %}" alt="">
+         <div class="card-title">
+        <h2>Pizza</h2>
+        <p>N1000.00</p>
+        <a href="#">Buy Now</a>
+        </div>
+      </div>
+
+      <div class="col">
+        <img src="{% static 'images/f7.png' %}" alt="">
+         <div class="card-title">
+        <h2>Pizza</h2>
+        <p>N1000.00</p>
+        <a href="#">Buy Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock content %}
