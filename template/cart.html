@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block title %}
+  Cart
+{% endblock title %}
+
+
+{% block content %}
+
+<div class="cart-container">
+    <h1>Your cart</h1>
+    
+    {% if cart %}
+         
+   
+        
+         <ul>
+            {% for items in cart_items %}
+                <li>
+                    <span>{{ items.product.name }}</span>
+                    <span>{{ items.product.price }}</span>
+                    <span>{{ items.quantity }}</span>
+                </li>
+            {% endfor %}
+        </ul>
+    <h2>Total: {{ total }}</h2>
+    {% else %}
+    <p class="empty-cart">Your Cart is Empty.</p>
+
+    {% endif %}
+    <a href="{% url 'order' %}" class="continue-shopping">Order Now</a>
+</div>
+  
+{% endblock content %}

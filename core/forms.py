@@ -8,13 +8,10 @@ class ProfileCreation(ModelForm):
         fields = "__all__"
         
 
-class CompanyCreation(ModelForm):
-    class Meta:
-        models = Company
-        fields = '__all__'
-        
-
 class Products(ModelForm):
     class Meta:
         models = Product
         fields = "__all__"
+        
+class SearchForm(forms.Form):
+    query = forms.CharField(label="Search", max_length=255)

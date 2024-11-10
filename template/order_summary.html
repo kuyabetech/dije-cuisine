@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block title %}
+Order Summary
+{% endblock title %}
+
+<head>
+  
+</head>
+{% block content %}
+<!-- order section starts  -->
+
+<main class="cd_main">
+    <!-- Start DEMO HTML (Use the following code into your project)-->
+    <div class="containers">
+        <div class="title">
+            <h2>Order summary</h2>
+        </div>
+        
+        {% if address %}
+            
+            <div class="Yorder">
+                <p>{{ addres.address }}</p>
+                <p>{{ addres.state }}</p>
+                <p>{{ addres.town }}</p>
+                <p>Postal Code: {{ addres.postal }}</p>
+                <p>Phone 1: {{ addres.phone1 }}</p>
+                <p>Phone 2: {{ addres.phone2 }}</p>
+            </div><!-- Yorder -->
+        {% else %}
+        <div class="empty-address">
+            <p>No Address Provides yet</p>
+            <a href="{% url 'order' %}">Add Adress</a>
+        </div>
+        {% endif %}
+
+    </div>
+</main>
+
+    <!-- order section ends -->
+     <script>
+        
+     </script>
+    {% endblock content %}

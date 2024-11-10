@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block title %}
+Payment
+{% endblock title %}
+
+<head>
+
+</head>
+{% block content %}
+<!-- order section starts  -->
+
+<main class="cd_main">
+    <!-- Start DEMO HTML (Use the following code into your project)-->
+    <div class="Yorder">
+        <div class="p-box">
+            <div class="p-title">
+                <h1>Order Payment</h1>
+            </div>
+            <div class="order-sum">
+                <h2>Product Name: <span>Rice</span></h2>
+            </div>
+           
+            <div class="p-type">
+                <input type="radio" name="dbt" value="dbt" checked> Direct Bank Transfer
+            </div>
+            <p>
+                Make your payment directly into our bank account and upload your reciept. Please use your Order ID as
+                the payment reference.
+                Your order will not be shipped until the funds have cleared in our account.
+            </p>
+            <div class="b-details">
+                <h2>Bank Details</h2>
+                <p>Account Number: <b>7011632616</b></p>
+                <p>Account Name: <b>Abdulrahman shaba Yakubu</b></p>
+                <p>Bank Name: <b>Opay</b></p>
+            </div>
+            <form action="" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="input-box">
+                    <input type="text" name="ref" placeholder="Payment Reference" required>
+                </div>
+                <div class="input-box">
+                    <input type="file" class="reciept" name="reciept" required>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div><!-- Yorder -->
+</main>
+
+<!-- order section ends -->
+<script>
+
+</script>
+{% endblock content %}

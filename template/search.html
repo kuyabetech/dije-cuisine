@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}
+  product list
+{% endblock title %}
+
+{% block content %}
+  
+<h2>Products</h2>
+
+{% if query %}
+  <p>Results for "{{ query }}"</p>
+  <ul>
+    {% for product in results %}
+    <li>{{ product.name }} </li>
+    <p>Descriptions: {{ product.desc }}</p>
+    {% empty %}
+    <li>No results for this product</li>
+    {% endfor %}
+  </ul>
+ {% else %}
+  <p>Please Enter a search term.</p>
+{% endif %}
+  
+    
+{% endblock content %}

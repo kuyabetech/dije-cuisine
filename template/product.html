@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block title %}
+  Products
+{% endblock title %}
+
+{% block content %}
+  
+
+<section class="menu" id="menu">
+
+    <!-- <h3 class="sub-heading" style="margin-top: 30px; font-size:1.8rem;"> our Products </h3> -->
+    <h1 class="heading"> today's speciality </h1>
+
+    <div class="box-container">
+        
+        {% for product in products %}
+            
+      
+            
+
+        <div class="box">
+            <div class="image">
+        <img src="{{product.image.url}}" alt="{{product.name}}">
+                <a href="#" class="fas fa-heart"></a>
+            </div>
+            <div class="content">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <h3>{{ product.name }}</h3>
+                <p>{{product.desc}}</p>
+                <a href="{% url 'add_to_cart' product.id %}" class="btn">add to cart</a>
+                <span class="price">N{{product.price}}</span>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+</section>
+{% endblock content %}

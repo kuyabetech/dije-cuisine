@@ -3,4 +3,8 @@ from .models import *
 # Register your models here.
 
 admin.site.register(Profile)
-admin.site.register(Company)
+admin.site.register(Product)
+admin.site.register(Cart)
+admin.site.register(CartItem)
+admin.site.register(OrderAddress)
+admin.site.register(Category)

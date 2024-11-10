@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+
+{% block title %}
+Order
+{% endblock title %}
+
+<head>
+  
+</head>
+{% block content %}
+<!-- order section starts  -->
+
+<main class="cd_main">
+    <!-- Start DEMO HTML (Use the following code into your project)-->
+    <div class="containers">
+        <div class="title">
+            <h2>Product Order Form</h2>
+        </div>
+        <div class="d-flex">
+            <form action="" method="post">
+              {% csrf_token %}
+                <label>
+                    <span class="fname">First Name <span class="required">*</span></span>
+                    <input type="text" name="fname">
+                </label>
+                <label>
+                    <span class="lname">Last Name <span class="required">*</span></span>
+                    <input type="text" name="lname">
+                </label>
+                <label>
+                    <span>Street Address <span class="required">*</span></span>
+                    <textarea placeholder="Enter you Address: House No. 23 El-Wazir Estate" name="address" req></textarea>
+                </label>
+                <label>
+                    <span>Town / City <span class="required">*</span></span>
+                    <input type="text" name="town">
+                </label>
+                <label>
+                    <span>State / County <span class="required">*</span></span>
+                    <input type="text" name="state">
+                </label>
+                <label>
+                    <span>Postcode / ZIP <span class="required">*</span></span>
+                    <input type="text" name="postal">
+                </label>
+                <label>
+                    <span>Phone 1 <span class="required">*</span></span>
+                    <input type="tel" name="phone1">
+                </label>
+                <label>
+                    <span>Phone 2 <span class="required">*</span></span>
+                    <input type="tel" name="phone2">
+                </label>
+                <label>
+                    <span>Email Address <span class="required">*</span></span>
+                    <input type="email" name="email">
+                </label>
+                <button type="submit">Place Order</button>
+            </form>
+        </div>
+    </div>
+</main>
+
+    <!-- order section ends -->
+     <script>
+        
+     </script>
+    {% endblock content %}
