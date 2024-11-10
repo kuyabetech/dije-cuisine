@@ -1,2 +1,3 @@
 # dije-cuisine
-E-commerce App
+Dije-cuisine app
+
