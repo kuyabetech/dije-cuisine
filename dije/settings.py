@@ -24,9 +24,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-8)0=5@zp)=s(e%xw4+e93s6pm*c^==l7t-ch4g&2i^-vso7eat'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'dije-cuisine-1.onrender.com',
+    'localhost',
+    '127.0.0.1',
+]
 
 
 # Application definition
